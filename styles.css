@@ -282,6 +282,25 @@ body {
     animation: fadeIn 2s ease-in-out;
 }
 
+/* Subtext1 Styling */
+.subtext1 {
+    font-size: 2.5rem;
+    color: #ff6f61;
+    margin-top: 20px;
+    animation: fadeIn 2s ease-in-out;
+    text-shadow: 2px 2px #ffa07a;
+}
+
+/* Subtext2 Styling */
+.subtext2 {
+    font-size: 2.5rem;
+    color: #ff6f61;
+    margin-top: 10px;
+    animation: fadeIn 3s ease-in-out;
+    text-shadow: 2px 2px #ffa07a;
+}
+
+
 /* Subtext */
 .subtext {
     font-size: 1.5rem;

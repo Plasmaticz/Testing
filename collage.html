@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Collage</title>
+    <style>
+        /* Collage Container */
+        .collage-container {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            background-color: #ffe6f2;
+            overflow: hidden;
+        }
+
+        /* Collage Images */
+        .collage-image {
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            opacity: 0;
+            border-radius: 10px;
+            animation: fadeInOut 10s linear infinite;
+        }
+
+        /* Fade-in and Fade-out Animation */
+        @keyframes fadeInOut {
+            0% { opacity: 0; }
+            20% { opacity: 1; }
+            80% { opacity: 1; }
+            100% { opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Background Music -->
+    <iframe src="background-music.html" style="display: none;" id="music-iframe"></iframe>
+
+    <div class="collage-container"></div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const collageContainer = document.querySelector(".collage-container");
+
+            // Array of image paths (image1.jpg to image30.jpg)
+            const images = Array.from({ length: 22 }, (_, i) => `photos/image${i + 1}.jpg`);
+
+            function getRandomInt(min, max) {
+                return Math.floor(Math.random() * (max - min + 1)) + min;
+            }
+
+            function createImage() {
+                const img = document.createElement("img");
+                img.src = images[getRandomInt(0, images.length - 1)]; // Randomly pick an image
+                img.classList.add("collage-image");
+
+                // Random positioning
+                img.style.top = `${getRandomInt(0, 80)}%`;
+                img.style.left = `${getRandomInt(0, 80)}%`;
+
+                // Random animation duration
+                const duration = getRandomInt(5, 8);
+                img.style.animationDuration = `${duration}s`;
+
+                collageContainer.appendChild(img);
+
+                // Remove image after animation ends
+                setTimeout(() => collageContainer.removeChild(img), duration * 1000);
+            }
+
+            // Continuously add new images
+            setInterval(createImage, 2000);
+        });
+    </script>
+</body>
+</html>

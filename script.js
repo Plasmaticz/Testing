@@ -58,9 +58,13 @@ function sendEmail() {
     .then((response) => {
         console.log("Email sent successfully:", response);
         alert("Your choices have been sent!");
+
+        // Redirect to the collage page after email is sent successfully
+        window.location.href = 'collage.html';
     })
     .catch((error) => {
         console.error("Error sending email:", error);
         alert(`Failed to send your choices. Error: ${error.text || "Unknown error"}`);
     });
 }
+
