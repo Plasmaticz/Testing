@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Final Page</title>
+        <link rel="stylesheet" href="styles.css">
+    
+        <!-- Updated EmailJS Script -->
+        <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+        <script>
+            emailjs.init("Jm5kplS8tdXeyyNhL"); /* Public Key */
+        </script>
+    </head>
+<body>
+    <div class="final-container">
+        <!-- Background Heart -->
+        <div class="background-heart">💖</div>
+
+        <!-- Images and Text -->
+        <div class="content-wrapper">
+            <!-- Left Image -->
+            <img src="assets/left.jpg" alt="Left Image" class="fade-in-image left-image">
+        
+            <!-- Main Text -->
+            <div class="text-container">
+                <h1 class="final-text">我爱你! See you soon~</h1>
+                <p class="subtext">Yours truly, 小苏.</p>
+            </div>
+        
+            <!-- Right Image -->
+            <img src="assets/right.jpg" alt="Right Image" class="fade-in-image right-image">
+        </div>        
+
+        <!-- Finish Button -->
+        <button class="continue-button" onclick="sendEmail()">Finish (It will send me an email)</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

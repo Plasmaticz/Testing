@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Where to After?</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="activity-container">
+        <h1 class="animated-text">Where to after?</h1>
+        <form id="activity-form">
+            <div class="activity-options">
+                <label>
+                    <input type="radio" name="activity" value="Dessert" required>
+                    <img src="assets/dessert.jpg" alt="Dessert" class="activity-image">
+                    Dessert
+                </label>
+                <label>
+                    <input type="radio" name="activity" value="Movies">
+                    <img src="assets/movies.jpg" alt="Movies" class="activity-image">
+                    Movies
+                </label>
+                <label>
+                    <input type="radio" name="activity" value="Park">
+                    <img src="assets/park.jpg" alt="Park" class="activity-image">
+                    Park
+                </label>
+                <label>
+                    <input type="radio" name="activity" value="Shopping">
+                    <img src="assets/shopping.jpg" alt="Shopping" class="activity-image">
+                    Shopping
+                </label>
+                <label>
+                    <input type="radio" name="activity" value="Arcade">
+                    <img src="assets/arcade.jpg" alt="Arcade" class="activity-image">
+                    Arcade
+                </label>
+            </div>
+            <button type="button" class="continue-button" onclick="saveActivity()">Continue</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

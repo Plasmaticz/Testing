@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Where Will We Eat?</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="location-container">
+        <h1 class="animated-text">Where will we eat?</h1>
+        <form id="location-form">
+            <div class="food-options">
+                <label>
+                    <input type="radio" name="location" value="Chinese" required>
+                    <img src="assets/chinese.jpg" alt="Chinese Food" class="food-image">
+                    Chinese
+                </label>
+                <label>
+                    <input type="radio" name="location" value="Japanese">
+                    <img src="assets/japanese.jpg" alt="Japanese Food" class="food-image">
+                    Japanese
+                </label>
+                <label>
+                    <input type="radio" name="location" value="Italian">
+                    <img src="assets/italian.jpg" alt="Italian Food" class="food-image">
+                    Italian
+                </label>
+                <label>
+                    <input type="radio" name="location" value="French">
+                    <img src="assets/french.jpg" alt="French Food" class="food-image">
+                    French
+                </label>
+                <label>
+                    <input type="radio" name="location" value="Korean">
+                    <img src="assets/korean.jpg" alt="Korean Food" class="food-image">
+                    Korean
+                </label>
+                <label>
+                    <input type="radio" name="location" value="Mexican">
+                    <img src="assets/mexican.jpg" alt="Mexican Food" class="food-image">
+                    Mexican
+                </label>
+                <label>
+                    <input type="radio" name="location" value="Thai">
+                    <img src="assets/thai.jpg" alt="Thai Food" class="food-image">
+                    Thai
+                </label>
+            </div>
+            <button type="button" class="continue-button" onclick="saveLocation()">Continue</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
